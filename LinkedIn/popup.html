@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Profile</title>
+  <style>
+    body {
+      width: 350px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background-color: #d6c6dd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgb(169, 141, 176);
+    }
+    h3 {
+      text-align: center;
+      color: #000000;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    .input-container {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 16px;
+      color: #000000;
+    }
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 2px solid #7f90c9;
+      border-radius: 4px;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    input[type="file"]:hover {
+      border-color: #6a76a0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #61669c;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #456ee1;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .status {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #5870a2;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    .status.show {
+      opacity: 1;
+    }
+    /* Animation for file input hover effect */
+input[type="file"] {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+input[type="file"]:hover {
+  border-color: #6a76a0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation for button hover effect */
+button {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+button:hover {
+  background-color: #456ee1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Animation for status message */
+.status {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.status.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  </style>
+</head>
+<body>
+  <h3>Profile picture changer</h3>
+  <div class="input-container file-input">
+    <label for="image-upload">Upload Image:</label>
+    <input type="file" id="image-upload" accept="image/*">
+  </div>
+  <button id="change-pictures">change profile picture</button>
+  <div class="status" id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
